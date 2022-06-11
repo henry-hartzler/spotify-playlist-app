@@ -66,6 +66,7 @@ class App extends React.Component {
 
   removeTrack(track) {
     let tracks = this.state.playlistTracks;
+    //this renders all the tracks EXCEPT the one selected - removing the selected from the playlist
     tracks = tracks.filter(el => el.id !== track.id);
 
     this.setState({playlistTracks: tracks});
