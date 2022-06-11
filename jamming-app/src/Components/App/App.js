@@ -31,26 +31,28 @@ class App extends React.Component {
     playlistName: {title: 'New Playlist'},
     playlistTracks: [
       {
-        name: 'name1',
-        artist: 'artist1',
-        album: 'album1',
+        name: 'playlistname1',
+        artist: 'playlistartist1',
+        album: 'playlistalbum1',
         id: 1
       },
       {
-        name: 'name2',
-        artist: 'artist2',
-        album: 'album2',
+        name: 'playlistname2',
+        artist: 'playlistartist2',
+        album: 'playlistalbum2',
         id: 2
       },
       {
-        name: 'name3',
-        artist: 'artist3',
-        album: 'album3',
+        name: 'playlistname3',
+        artist: 'playlistartist3',
+        album: 'playlistalbum3',
         id: 3
       }
     ]
     };
   }
+
+  
   render() {
     return (
       <div>
