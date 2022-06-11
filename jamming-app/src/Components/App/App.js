@@ -34,24 +34,33 @@ class App extends React.Component {
         name: 'playlistname1',
         artist: 'playlistartist1',
         album: 'playlistalbum1',
-        id: 1
+        id: 4
       },
       {
         name: 'playlistname2',
         artist: 'playlistartist2',
         album: 'playlistalbum2',
-        id: 2
+        id: 5
       },
       {
         name: 'playlistname3',
         artist: 'playlistartist3',
         album: 'playlistalbum3',
-        id: 3
+        id: 6
       }
     ]
     };
   }
 
+  addTrack(track) {
+    let tracks = this.state.playlistTracks;
+    if (tracks.find(el => el.id === track.id)) {
+      return;
+    }
+    tracks.push(track);
+
+    this.setState({playlistTracks: tracks});
+  }
   
   render() {
     return (
