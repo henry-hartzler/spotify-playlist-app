@@ -54,6 +54,7 @@ class App extends React.Component {
     this.removeTrack = this.removeTrack.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
+    this.search = this.search.bind(this);
   }
 
   addTrack(track) {
@@ -82,6 +83,10 @@ class App extends React.Component {
   //this generates a new array of uri properties from the playlistTracks property
   savePlaylist() {
     const trackURIs = this.state.playlistTracks.map(el => el.uri);
+  }
+
+  search(term) {
+    console.log(term);
   }
   
   render() {
