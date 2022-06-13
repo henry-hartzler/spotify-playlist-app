@@ -1,6 +1,6 @@
 let accessToken;
 const clientID = '7033ba45bb374fd2991551b40ac8afbb';
-const redirectURI = 'https://peaceful-creponne-1756e3.netlify.app';
+const redirectURI = 'https://hartzler-spotify-playlist.netlify.app';
 
 const Spotify = {
     getAccessToken() {
