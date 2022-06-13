@@ -27,9 +27,9 @@ const Spotify = {
     },
 
     //might make it async search(term) and replace return fetch with await fetch
-    async search(term) {
+    search(term) {
         const accessToken = Spotify.getAccessToken();
-        await fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, {
+        return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, {
             headers: 
             {Authorization: `Bearer ${accessToken}`}
         }).then(response => {
@@ -46,7 +46,7 @@ const Spotify = {
         })
     },
 
-    async savePlaylist(name, trackURIs) {
+    savePlaylist(name, trackURIs) {
         //checks to see if playlistName or array of track URIs is empty and just returns.
         if (!name || !trackURIs.length) {
             return;
@@ -57,7 +57,7 @@ const Spotify = {
         const headers = {Authorization: `Bearer ${accessToken}`};
         let userId;
 
-        await fetch('https://api.spotify.com/v1/me', {headers: headers}).then(response => {
+        return fetch('https://api.spotify.com/v1/me', {headers: headers}).then(response => {
             return response.json()
         }).then(jsonResponse => {
             userId = jsonResponse.id;
